@@ -12,6 +12,7 @@
       ''
         set -g fish_color_autosuggestion 908caa
         set -g fish_pager_color_description 908caa
+        set -gx LS_COLORS (${lib.getExe pkgs.vivid} generate gruvbox-dark)
 
         set fish_greeting
         ${lib.getExe pkgs.zoxide} init fish | source

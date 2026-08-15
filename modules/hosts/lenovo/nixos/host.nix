@@ -1,6 +1,6 @@
 # Entry point for the lenovo host: assembles the named modules defined by the
 # sibling files (each auto-imported by import-tree).
-{ inputs, self, ... }: {
+{ inputs, self, lib, ... }: {
   flake.nixosConfigurations.lenovo = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       inputs.hjem.nixosModules.default
@@ -29,7 +29,14 @@
       self.nixosModules.lenovo-xdg
       self.nixosModules.lenovo-theme
     ];
-
+    nixpkgs.config.allowUnfree = false;
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "broadcom-bt-firmware"
+      "b43-firmware"
+      "xone-dongle-firmware"
+      "facetimehd-calibration"
+      "facetimehd-firmware"
+    ];
     system.stateVersion = "23.11";
   };
 }

@@ -6,7 +6,7 @@
   in {
     imports = [
       self.nixosModules.mpd
-      self.nixosModules.anki
+      #self.nixosModules.anki
       self.nixosModules.libreoffice
       self.nixosModules.forticlient
     ];

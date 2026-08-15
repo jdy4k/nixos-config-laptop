@@ -13,7 +13,7 @@
       pkgs.writeText "foot.ini"
       ''
       [main]
-      font=FiraCode Nerd Font:size=10
+      font=FiraCode Nerd Font:size=8
       pad=8x8
       dpi-aware=yes
       term=xterm-256color

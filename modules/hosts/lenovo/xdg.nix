@@ -8,7 +8,7 @@
       config.common.default = [ "gtk" ];
     };
 
-    xdg.mime = {
+  xdg.mime = {
       enable = true;
       defaultApplications = {
         # Browser
@@ -37,10 +37,11 @@
     hjem.users.jdy4k = {
       directory = "/home/jdy4k";
       files.".config/user-dirs.dirs".text = ''
-        XDG_DOCUMENTS_DIR="$HOME/documents"
-        XDG_DOWNLOAD_DIR="$HOME/downloads"
-        XDG_MUSIC_DIR="$HOME/music"
-        XDG_PICTURES_DIR="$HOME/pictures"
+        XDG_DOCUMENTS_DIR="$HOME/local_documents"
+        XDG_DOWNLOAD_DIR="$HOME/local_downloads"
+        XDG_MUSIC_DIR="$HOME/local_music"
+        XDG_PICTURES_DIR="$HOME/local_pictures"
+        XDG_DESKTOP_DIR="$HOME/.desktop"
       '';
     };
   };

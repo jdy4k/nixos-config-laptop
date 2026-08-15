@@ -7,7 +7,6 @@
       vollkorn
       ubuntu-sans
       cm_unicode
-      corefonts
       unifont
     ];
 
